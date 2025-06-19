@@ -3,8 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { useFormState } from "react-dom";
-import { useEffect } from "react";
+import { useActionState, useEffect } from "react"; // 변경된 부분
 
 import { Button } from "@/components/ui/button";
 import {
@@ -32,6 +31,7 @@ import { format } from "date-fns";
 import { ko } from 'date-fns/locale';
 import { useToast } from "@/hooks/use-toast";
 import { bookAppointment, type AppointmentFormState } from "@/app/actions/book-appointment";
+import { Card } from "@/components/ui/card"; // Card 컴포넌트 import 추가
 
 const appointmentFormSchema = z.object({
   name: z.string().min(2, { message: "이름은 2자 이상이어야 합니다." }),
@@ -57,7 +57,7 @@ export default function AppointmentForm() {
   const { toast } = useToast();
   
   const initialState: AppointmentFormState = { message: "", success: false };
-  const [state, formAction] = useFormState(bookAppointment, initialState);
+  const [state, formAction] = useActionState(bookAppointment, initialState); // 변경된 부분
 
   const form = useForm<AppointmentFormData>({
     resolver: zodResolver(appointmentFormSchema),
@@ -276,5 +276,3 @@ export default function AppointmentForm() {
     </section>
   );
 }
-// Adding Card component import since it's used
-import { Card } from "@/components/ui/card";
