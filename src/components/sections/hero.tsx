@@ -24,7 +24,7 @@ export default function HeroSection() {
         </div>
         <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl animate-fade-in animation-delay-300">
           <Image
-            src="https://i.imgur.com/qK0l94D.jpeg"
+            src="https://i.imgur.com/qK0l94D.jpg"
             alt="연세 미 치과 입구"
             layout="fill"
             objectFit="cover"

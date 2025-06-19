@@ -54,7 +54,7 @@ export default function ContactLocation() {
           </Card>
           <div className="aspect-video bg-muted rounded-lg shadow-lg overflow-hidden animate-slide-up animation-delay-200">
             <Image
-              src="https://i.imgur.com/qK0l94D.jpeg"
+              src="https://i.imgur.com/qK0l94D.jpg"
               alt="연세 미 치과 입구"
               width={600}
               height={400}
