@@ -25,10 +25,10 @@ export default function HeroSection() {
         <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl animate-fade-in animation-delay-300">
           <Image 
             src="https://placehold.co/600x400.png" 
-            alt="연세 미 치과에서 미소짓는 환자"
+            alt="연세 미 치과 입구"
             layout="fill"
             objectFit="cover"
-            data-ai-hint="dental clinic interior"
+            data-ai-hint="clinic entrance"
             priority
           />
            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
