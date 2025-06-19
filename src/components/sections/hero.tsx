@@ -24,7 +24,7 @@ export default function HeroSection() {
         </div>
         <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl animate-fade-in animation-delay-300">
           <Image
-            src="https://placehold.co/600x400.png"
+            src="https://storage.googleapis.com/YOUR_PROJECT_ID.appspot.com/site-images/clinic-entrance.jpeg" // Firebase Storage URL로 변경
             alt="연세 미 치과 전경"
             layout="fill"
             objectFit="cover"

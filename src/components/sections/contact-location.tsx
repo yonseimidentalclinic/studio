@@ -54,7 +54,7 @@ export default function ContactLocation() {
           </Card>
           <div className="aspect-video bg-muted rounded-lg shadow-lg overflow-hidden animate-slide-up animation-delay-200">
             <Image
-              src="https://placehold.co/600x400.png"
+              src="https://storage.googleapis.com/YOUR_PROJECT_ID.appspot.com/site-images/clinic-entrance.jpeg" // Firebase Storage URL로 변경
               alt="연세 미 치과 지도 위치"
               width={600}
               height={400}

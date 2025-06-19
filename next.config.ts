@@ -18,9 +18,9 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'storage.googleapis.com',
+        hostname: 'storage.googleapis.com', // Firebase Storage 호스트 추가
         port: '',
-        pathname: '/**',
+        pathname: '/**', // 프로젝트 ID 및 경로를 포함하도록 와일드카드 사용
       },
     ],
   },
