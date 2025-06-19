@@ -14,9 +14,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2" aria-label="연세 리바이브 치과 홈">
+        <Link href="/" className="flex items-center gap-2" aria-label="연세 미 치과 홈">
           <Stethoscope className="h-8 w-8 text-primary" />
-          <span className="font-headline text-2xl font-semibold text-primary">연세 리바이브 치과</span>
+          <span className="font-headline text-2xl font-semibold text-primary">연세 미 치과</span>
         </Link>
         <nav className="hidden md:flex gap-6 items-center">
           {navLinks.map((link) => (
@@ -41,9 +41,9 @@ export default function Header() {
           </SheetTrigger>
           <SheetContent side="right">
             <nav className="grid gap-6 text-lg font-medium mt-8">
-            <Link href="/" className="flex items-center gap-2 mb-4" aria-label="연세 리바이브 치과 홈">
+            <Link href="/" className="flex items-center gap-2 mb-4" aria-label="연세 미 치과 홈">
               <Stethoscope className="h-7 w-7 text-primary" />
-              <span className="font-headline text-xl font-semibold text-primary">연세 리바이브 치과</span>
+              <span className="font-headline text-xl font-semibold text-primary">연세 미 치과</span>
             </Link>
               {navLinks.map((link) => (
                 <Link

@@ -11,7 +11,7 @@ export default function HeroSection() {
             당신의 미소를 되찾고, <span className="text-accent">당신의 삶을 새롭게 하세요.</span>
           </h1>
           <p className="text-lg md:text-xl text-foreground/80">
-            연세 리바이브 치과에서 뛰어난 치과 진료를 경험하세요. 저희 전문 의료진은 현대적이고 편안한 환경에서 포괄적인 서비스를 제공합니다.
+            연세 미 치과에서 뛰어난 치과 진료를 경험하세요. 저희 전문 의료진은 현대적이고 편안한 환경에서 포괄적인 서비스를 제공합니다.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Button asChild size="lg" className="shadow-lg hover:shadow-xl transition-shadow bg-accent hover:bg-accent/90">
@@ -25,7 +25,7 @@ export default function HeroSection() {
         <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl animate-fade-in animation-delay-300">
           <Image 
             src="https://placehold.co/600x400.png" 
-            alt="연세 리바이브 치과에서 미소짓는 환자"
+            alt="연세 미 치과에서 미소짓는 환자"
             layout="fill"
             objectFit="cover"
             data-ai-hint="dental clinic interior"

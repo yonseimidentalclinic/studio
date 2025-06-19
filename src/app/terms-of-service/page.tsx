@@ -15,7 +15,7 @@ export default function TermsOfServicePage() {
           </p>
           <h2 className="font-headline text-2xl text-primary/90">2. 서비스</h2>
           <p>
-            연세 리바이브 치과는 치과 정보 및 예약 서비스를 제공합니다. 이 웹사이트에서 제공되는 정보는 일반적인 정보 제공 목적으로만 제공되며 의학적 조언을 구성하지 않습니다.
+            연세 미 치과는 치과 정보 및 예약 서비스를 제공합니다. 이 웹사이트에서 제공되는 정보는 일반적인 정보 제공 목적으로만 제공되며 의학적 조언을 구성하지 않습니다.
           </p>
           <h2 className="font-headline text-2xl text-primary/90">3. 사용자 책임</h2>
           <p>
@@ -23,11 +23,11 @@ export default function TermsOfServicePage() {
           </p>
           <h2 className="font-headline text-2xl text-primary/90">4. 지적 재산권</h2>
           <p>
-            달리 명시되지 않는 한, 이 웹사이트의 콘텐츠, 레이아웃, 디자인, 데이터, 데이터베이스 및 그래픽은 지적 재산권법에 의해 보호되며 연세 리바이브 치과의 소유입니다.
+            달리 명시되지 않는 한, 이 웹사이트의 콘텐츠, 레이아웃, 디자인, 데이터, 데이터베이스 및 그래픽은 지적 재산권법에 의해 보호되며 연세 미 치과의 소유입니다.
           </p>
           <h2 className="font-headline text-2xl text-primary/90">5. 책임 제한</h2>
           <p>
-            연세 리바이브 치과는 귀하의 서비스 액세스 또는 사용 또는 서비스 액세스 또는 사용 불능으로 인해 발생하는 이익, 데이터, 사용, 영업권 또는 기타 무형의 손실을 포함하되 이에 국한되지 않는 간접적, 부수적, 특별, 결과적 또는 징벌적 손해에 대해 책임을 지지 않습니다.
+            연세 미 치과는 귀하의 서비스 액세스 또는 사용 또는 서비스 액세스 또는 사용 불능으로 인해 발생하는 이익, 데이터, 사용, 영업권 또는 기타 무형의 손실을 포함하되 이에 국한되지 않는 간접적, 부수적, 특별, 결과적 또는 징벌적 손해에 대해 책임을 지지 않습니다.
           </p>
           <h2 className="font-headline text-2xl text-primary/90">6. 약관 변경</h2>
           <p>
@@ -35,7 +35,7 @@ export default function TermsOfServicePage() {
           </p>
            <h2 className="font-headline text-2xl text-primary/90">7. 문의하기</h2>
           <p>
-            본 약관에 대해 질문이 있으시면 info@yonseirevive.com으로 문의하십시오.
+            본 약관에 대해 질문이 있으시면 info@yonseimidental.com으로 문의하십시오. (이메일 주소 예시 변경)
           </p>
         </div>
       </main>

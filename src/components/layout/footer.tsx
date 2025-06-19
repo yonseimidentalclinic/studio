@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border/40 bg-secondary">
       <div className="container py-8 text-center text-sm text-secondary-foreground">
-        <p>&copy; {currentYear} 연세 리바이브 치과. 모든 권리 보유.</p>
+        <p>&copy; {currentYear} 연세 미 치과. 모든 권리 보유.</p>
         <p className="mt-1">
           당신의 미소를 위해 정성껏 디자인되었습니다.
         </p>

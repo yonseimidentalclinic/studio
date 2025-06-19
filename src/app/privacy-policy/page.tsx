@@ -11,7 +11,7 @@ export default function PrivacyPolicyPage() {
           <p>최종 업데이트: {new Date().toLocaleDateString()}</p>
           <h2 className="font-headline text-2xl text-primary/90">소개</h2>
           <p>
-            연세 리바이브 치과("당사", "우리")에 오신 것을 환영합니다. 당사는 귀하의 개인 정보를 보호하고 귀하의 개인 정보 보호 권리를 존중하기 위해 최선을 다하고 있습니다. 이 개인 정보 보호 고지 또는 귀하의 개인 정보와 관련된 당사의 관행에 대해 질문이나 우려 사항이 있는 경우 info@yonseirevive.com으로 문의하십시오.
+            연세 미 치과("당사", "우리")에 오신 것을 환영합니다. 당사는 귀하의 개인 정보를 보호하고 귀하의 개인 정보 보호 권리를 존중하기 위해 최선을 다하고 있습니다. 이 개인 정보 보호 고지 또는 귀하의 개인 정보와 관련된 당사의 관행에 대해 질문이나 우려 사항이 있는 경우 info@yonseimidental.com으로 문의하십시오. (이메일 주소 예시 변경)
           </p>
           <h2 className="font-headline text-2xl text-primary/90">수집하는 정보</h2>
           <p>
@@ -43,9 +43,9 @@ export default function PrivacyPolicyPage() {
           </p>
           <h2 className="font-headline text-2xl text-primary/90">문의하기</h2>
           <p>
-            본 정책에 대한 질문이나 의견이 있으시면 info@yonseirevive.com으로 이메일을 보내거나 다음 주소로 우편을 보내주십시오:
+            본 정책에 대한 질문이나 의견이 있으시면 info@yonseimidental.com으로 이메일을 보내거나 다음 주소로 우편을 보내주십시오: (이메일 주소 예시 변경)
             <br />
-            Yonsei Revive Dental
+            Yonsei Mi Dental
             <br />
             123 Dental Street, Smileville, SV 45678
           </p>
