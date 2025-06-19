@@ -36,7 +36,7 @@ export default function ContactLocation() {
                 <Mail className="h-6 w-6 text-accent mt-1 shrink-0" />
                 <div>
                   <h3 className="font-semibold text-foreground">이메일</h3>
-                  <a href="mailto:info@yonseirevive.com" className="text-foreground/80 hover:text-accent transition-colors">info@yonseirevive.com</a>
+                  <a href="mailto:info@yonseimidental.com" className="text-foreground/80 hover:text-accent transition-colors">info@yonseimidental.com</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -53,14 +53,14 @@ export default function ContactLocation() {
             </CardContent>
           </Card>
           <div className="aspect-video bg-muted rounded-lg shadow-lg overflow-hidden animate-slide-up animation-delay-200">
-            {/* Placeholder for map. Replace with actual map component if needed. */}
+            {/* 여기에 이미지 src를 변경하여 원하는 이미지로 교체할 수 있습니다. */}
             <Image 
               src="https://placehold.co/600x400.png" 
-              alt="병원 위치 지도" 
+              alt="병원 위치 또는 관련 이미지" 
               width={600} 
               height={400} 
               className="w-full h-full object-cover"
-              data-ai-hint="city map"
+              data-ai-hint="location business"
             />
           </div>
         </div>
