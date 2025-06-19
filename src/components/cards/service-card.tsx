@@ -24,7 +24,7 @@ export default function ServiceCard({ icon: Icon, title, description, link = "#a
       </CardContent>
       <div className="p-6 pt-0">
         <Button asChild variant="link" className="p-0 text-accent hover:text-accent/80">
-          <Link href={link}>Learn More &rarr;</Link>
+          <Link href={link}>더 알아보기 &rarr;</Link>
         </Button>
       </div>
     </Card>

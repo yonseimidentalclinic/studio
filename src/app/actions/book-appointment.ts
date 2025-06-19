@@ -3,11 +3,11 @@
 import { z } from "zod";
 
 const AppointmentSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters."),
-  phone: z.string().min(10, "Please enter a valid phone number.").regex(/^\+?[0-9\s-()]+$/, "Invalid phone number format."),
-  email: z.string().email("Please enter a valid email address."),
-  preferredDate: z.string().refine((date) => !isNaN(Date.parse(date)), "Please select a valid date."),
-  preferredTime: z.string().min(1, "Please select a preferred time."),
+  name: z.string().min(2, "이름은 2자 이상이어야 합니다."),
+  phone: z.string().min(10, "유효한 전화번호를 입력해주세요.").regex(/^\+?[0-9\s-()]+$/, "잘못된 전화번호 형식입니다."),
+  email: z.string().email("유효한 이메일 주소를 입력해주세요."),
+  preferredDate: z.string().refine((date) => !isNaN(Date.parse(date)), "유효한 날짜를 선택해주세요."),
+  preferredTime: z.string().min(1, "예약 희망 시간을 선택해주세요."),
   service: z.string().optional(),
   message: z.string().optional(),
 });
@@ -42,7 +42,7 @@ export async function bookAppointment(
 
   if (!validatedFields.success) {
     return {
-      message: "Form submission failed. Please check the errors below.",
+      message: "양식 제출에 실패했습니다. 아래 오류를 확인해주세요.",
       success: false,
       errors: validatedFields.error.flatten().fieldErrors,
     };
@@ -56,13 +56,13 @@ export async function bookAppointment(
   // Example of a potential error during submission
   // if (validatedFields.data.email.includes("testfail")) {
   //   return {
-  //     message: "Submission failed due to a server error. Please try again.",
+  //     message: "서버 오류로 인해 제출에 실패했습니다. 다시 시도해주세요.",
   //     success: false,
   //   };
   // }
 
   return {
-    message: "Thank you! Your appointment request has been submitted successfully. We will contact you shortly to confirm.",
+    message: "감사합니다! 예약 요청이 성공적으로 제출되었습니다. 확인을 위해 곧 연락드리겠습니다.",
     success: true,
   };
 }

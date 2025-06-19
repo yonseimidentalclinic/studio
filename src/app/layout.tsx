@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Yonsei Revive Dental',
-  description: 'Welcome to Yonsei Revive Dental Clinic - Modern Dental Care for a Brighter Smile.',
+  title: '연세 리바이브 치과',
+  description: '연세 리바이브 치과에 오신 것을 환영합니다 - 더 밝은 미소를 위한 현대적인 치과 진료.',
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

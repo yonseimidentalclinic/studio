@@ -29,27 +29,28 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { cn } from "@/lib/utils";
 import { CalendarIcon, Loader2 } from "lucide-react";
 import { format } from "date-fns";
+import { ko } from 'date-fns/locale';
 import { useToast } from "@/hooks/use-toast";
 import { bookAppointment, type AppointmentFormState } from "@/app/actions/book-appointment";
 
 const appointmentFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  phone: z.string().min(10, { message: "Please enter a valid phone number." }).regex(/^\+?[0-9\s-()]+$/, "Invalid phone number format."),
-  email: z.string().email({ message: "Please enter a valid email address." }),
-  preferredDate: z.date({ required_error: "A preferred date is required." }),
-  preferredTime: z.string().min(1, { message: "Please select a preferred time." }),
+  name: z.string().min(2, { message: "이름은 2자 이상이어야 합니다." }),
+  phone: z.string().min(10, { message: "유효한 전화번호를 입력해주세요." }).regex(/^\+?[0-9\s-()]+$/, "잘못된 전화번호 형식입니다."),
+  email: z.string().email({ message: "유효한 이메일 주소를 입력해주세요." }),
+  preferredDate: z.date({ required_error: "예약 희망일은 필수입니다." }),
+  preferredTime: z.string().min(1, { message: "예약 희망 시간을 선택해주세요." }),
   service: z.string().optional(),
-  message: z.string().max(500, { message: "Message cannot exceed 500 characters." }).optional(),
+  message: z.string().max(500, { message: "메시지는 500자를 초과할 수 없습니다." }).optional(),
 });
 
 type AppointmentFormData = z.infer<typeof appointmentFormSchema>;
 
 const timeSlots = [
-  "09:00 AM", "10:00 AM", "11:00 AM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM"
+  "오전 09:00", "오전 10:00", "오전 11:00", "오후 02:00", "오후 03:00", "오후 04:00", "오후 05:00"
 ];
 
 const dentalServices = [
-  "General Check-up", "Teeth Cleaning", "Cosmetic Dentistry", "Orthodontics", "Implant Consultation", "Other"
+  "일반 검진", "스케일링", "심미 치과", "교정 치과", "임플란트 상담", "기타"
 ];
 
 export default function AppointmentForm() {
@@ -76,14 +77,14 @@ export default function AppointmentForm() {
     if (state.message) {
       if (state.success) {
         toast({
-          title: "Success!",
+          title: "성공!",
           description: state.message,
         });
         form.reset(); 
       } else {
         toast({
-          title: "Error",
-          description: state.message || "An unexpected error occurred.",
+          title: "오류",
+          description: state.message || "예상치 못한 오류가 발생했습니다.",
           variant: "destructive",
         });
         // Populate form errors from server action if any
@@ -103,9 +104,9 @@ export default function AppointmentForm() {
     <section id="appointment" className="bg-gradient-to-br from-primary/10 via-background to-background py-16 md:py-24">
       <div className="container max-w-3xl">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Book Your Appointment</h2>
+          <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">진료 예약하기</h2>
           <p className="mt-4 text-lg text-foreground/80">
-            Fill out the form below to request an appointment. We'll get back to you soon!
+            아래 양식을 작성하여 예약을 요청하세요. 곧 연락드리겠습니다!
           </p>
         </div>
         <Card className="shadow-xl p-6 md:p-8">
@@ -117,9 +118,9 @@ export default function AppointmentForm() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Full Name</FormLabel>
+                      <FormLabel>성함</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your Name" {...field} className="bg-input"/>
+                        <Input placeholder="성함을 입력하세요" {...field} className="bg-input"/>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -130,9 +131,9 @@ export default function AppointmentForm() {
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Phone Number</FormLabel>
+                      <FormLabel>전화번호</FormLabel>
                       <FormControl>
-                        <Input placeholder="(123) 456-7890" {...field} className="bg-input"/>
+                        <Input placeholder="(010) 1234-5678" {...field} className="bg-input"/>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -144,7 +145,7 @@ export default function AppointmentForm() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email Address</FormLabel>
+                    <FormLabel>이메일 주소</FormLabel>
                     <FormControl>
                       <Input type="email" placeholder="you@example.com" {...field} className="bg-input"/>
                     </FormControl>
@@ -158,7 +159,7 @@ export default function AppointmentForm() {
                   name="preferredDate"
                   render={({ field }) => (
                     <FormItem className="flex flex-col">
-                      <FormLabel>Preferred Date</FormLabel>
+                      <FormLabel>예약 희망일</FormLabel>
                       <Popover>
                         <PopoverTrigger asChild>
                           <FormControl>
@@ -170,9 +171,9 @@ export default function AppointmentForm() {
                               )}
                             >
                               {field.value ? (
-                                format(field.value, "PPP")
+                                format(field.value, "PPP", { locale: ko })
                               ) : (
-                                <span>Pick a date</span>
+                                <span>날짜 선택</span>
                               )}
                               <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                             </Button>
@@ -187,6 +188,7 @@ export default function AppointmentForm() {
                               date < new Date(new Date().setDate(new Date().getDate() - 1)) // Disable past dates
                             }
                             initialFocus
+                            locale={ko}
                           />
                         </PopoverContent>
                       </Popover>
@@ -199,11 +201,11 @@ export default function AppointmentForm() {
                   name="preferredTime"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Preferred Time</FormLabel>
+                      <FormLabel>예약 희망 시간</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="bg-input">
-                            <SelectValue placeholder="Select a time slot" />
+                            <SelectValue placeholder="시간 선택" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -222,11 +224,11 @@ export default function AppointmentForm() {
                 name="service"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Service of Interest (Optional)</FormLabel>
+                    <FormLabel>관심 서비스 (선택 사항)</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger className="bg-input">
-                          <SelectValue placeholder="Select a service" />
+                          <SelectValue placeholder="서비스 선택" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -244,10 +246,10 @@ export default function AppointmentForm() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Additional Message (Optional)</FormLabel>
+                    <FormLabel>추가 메시지 (선택 사항)</FormLabel>
                     <FormControl>
                       <Textarea
-                        placeholder="Any additional information or specific requests..."
+                        placeholder="추가 정보나 특별 요청 사항이 있으시면 입력해주세요..."
                         className="resize-none bg-input"
                         rows={4}
                         {...field}
@@ -261,10 +263,10 @@ export default function AppointmentForm() {
                 {isSubmitting ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Submitting...
+                    제출 중...
                   </>
                 ) : (
-                  "Request Appointment"
+                  "예약 요청하기"
                 )}
               </Button>
             </form>
@@ -276,4 +278,3 @@ export default function AppointmentForm() {
 }
 // Adding Card component import since it's used
 import { Card } from "@/components/ui/card";
-

@@ -54,7 +54,7 @@ export default function SmartDentalAssistant() {
       const errorMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
         sender: 'ai',
-        text: "I'm sorry, I encountered an error. Please try again later.",
+        text: "죄송합니다, 오류가 발생했습니다. 나중에 다시 시도해주세요.",
       };
       setMessages((prevMessages) => [...prevMessages, errorMessage]);
     } finally {
@@ -69,11 +69,11 @@ export default function SmartDentalAssistant() {
         {
           id: 'initial-greeting',
           sender: 'ai',
-          text: "Hello! I'm your Smart Dental Assistant from Yonsei Revive Dental. How can I help you today? You can ask me about our services, office hours, or how to schedule an appointment."
+          text: "안녕하세요! 저는 연세 리바이브 치과의 스마트 덴탈 어시스턴트입니다. 무엇을 도와드릴까요? 저희 서비스, 진료 시간 또는 예약 방법에 대해 문의하실 수 있습니다."
         }
       ]);
     }
-  }, [isOpen]);
+  }, [isOpen, messages.length]);
 
 
   return (
@@ -83,7 +83,7 @@ export default function SmartDentalAssistant() {
         size="lg"
         className="fixed bottom-6 right-6 rounded-full h-16 w-16 p-0 shadow-xl bg-accent hover:bg-accent/90 z-50 flex items-center justify-center animate-fade-in"
         onClick={() => setIsOpen(true)}
-        aria-label="Open dental assistant chatbot"
+        aria-label="덴탈 어시스턴트 챗봇 열기"
       >
         <MessageSquare className="h-8 w-8 text-accent-foreground" />
       </Button>
@@ -93,10 +93,10 @@ export default function SmartDentalAssistant() {
           <DialogHeader className="p-6 pb-2 border-b">
             <DialogTitle className="font-headline text-xl text-primary flex items-center gap-2">
               <AiIcon className="h-6 w-6 text-primary" />
-              Smart Dental Assistant
+              스마트 덴탈 어시스턴트
             </DialogTitle>
             <DialogDescription className="text-sm">
-              Ask about services, hours, or appointments.
+              서비스, 시간 또는 예약에 대해 문의하세요.
             </DialogDescription>
           </DialogHeader>
           
@@ -147,16 +147,16 @@ export default function SmartDentalAssistant() {
             <div className="flex w-full items-center gap-2">
               <Input
                 type="text"
-                placeholder="Type your message..."
+                placeholder="메시지를 입력하세요..."
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                 className="flex-grow bg-input focus:ring-accent"
                 disabled={isLoading}
-                aria-label="Chat input"
+                aria-label="채팅 입력"
               />
               <Button onClick={handleSendMessage} disabled={isLoading || inputValue.trim() === ''} className="bg-accent hover:bg-accent/90">
-                Send
+                보내기
                 {isLoading && <Loader2 className="ml-2 h-4 w-4 animate-spin" />}
               </Button>
             </div>

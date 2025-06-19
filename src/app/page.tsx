@@ -31,8 +31,8 @@ export default function HomePage() {
 export function PrivacyPolicyPage() {
   return (
     <div className="container py-12">
-      <h1 className="font-headline text-3xl mb-4">Privacy Policy</h1>
-      <p>This is a placeholder for the Privacy Policy.</p>
+      <h1 className="font-headline text-3xl mb-4">개인정보 처리방침</h1>
+      <p>이것은 개인정보 처리방침을 위한 임시 내용입니다.</p>
     </div>
   );
 }
@@ -40,9 +40,8 @@ export function PrivacyPolicyPage() {
 export function TermsOfServicePage() {
   return (
     <div className="container py-12">
-      <h1 className="font-headline text-3xl mb-4">Terms of Service</h1>
-      <p>This is a placeholder for the Terms of Service.</p>
+      <h1 className="font-headline text-3xl mb-4">서비스 이용약관</h1>
+      <p>이것은 서비스 이용약관을 위한 임시 내용입니다.</p>
     </div>
   );
 }
-

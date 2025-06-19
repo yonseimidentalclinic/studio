@@ -8,22 +8,22 @@ import Image from 'next/image';
 
 const testimonials = [
   {
-    quote: "Yonsei Revive Dental has completely transformed my smile! The staff is incredibly friendly and professional. I highly recommend them.",
-    author: "Jiyeon K.",
+    quote: "연세 리바이브 치과 덕분에 제 미소가 완전히 바뀌었어요! 직원분들이 정말 친절하고 전문적이세요. 강력 추천합니다.",
+    author: "김지연 님",
     image: "https://placehold.co/100x100.png",
     rating: 5,
     imageHint: "happy patient"
   },
   {
-    quote: "I used to be anxious about dental visits, but Dr. Park and his team made me feel so comfortable. Excellent service and results!",
-    author: "Michael S.",
+    quote: "예전에는 치과 방문이 불안했는데, 박 원장님과 팀원분들 덕분에 정말 편안했어요. 훌륭한 서비스와 결과입니다!",
+    author: "마이클 S. 님",
     image: "https://placehold.co/100x100.png",
     rating: 5,
     imageHint: "dental review"
   },
   {
-    quote: "The best dental clinic I've ever been to. They are very thorough and use the latest technology. My teeth have never felt healthier.",
-    author: "Emily R.",
+    quote: "제가 가본 치과 중에 최고예요. 정말 꼼꼼하시고 최신 기술을 사용하세요. 이렇게 건강한 치아는 처음 느껴봐요.",
+    author: "에밀리 R. 님",
     image: "https://placehold.co/100x100.png",
     rating: 5,
     imageHint: "satisfied client"
@@ -65,7 +65,7 @@ export default function TestimonialCarousel() {
     return (
       <section id="testimonials" className="bg-background">
         <div className="container text-center">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary mb-12">What Our Patients Say</h2>
+          <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary mb-12">고객 후기</h2>
           <div className="relative max-w-2xl mx-auto h-80 bg-muted rounded-lg shadow-xl animate-pulse"></div>
         </div>
       </section>
@@ -77,13 +77,13 @@ export default function TestimonialCarousel() {
   return (
     <section id="testimonials" className="bg-background">
       <div className="container text-center">
-        <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary mb-12">What Our Patients Say</h2>
+        <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary mb-12">고객 후기</h2>
         <div className="relative max-w-2xl mx-auto">
           <Card className="overflow-hidden shadow-xl bg-card border-primary/20">
             <CardContent className="p-8 md:p-12 min-h-[300px] flex flex-col justify-center items-center">
               <Image 
                 src={currentTestimonial.image} 
-                alt={`Photo of ${currentTestimonial.author}`} 
+                alt={`${currentTestimonial.author} 사진`} 
                 width={80} 
                 height={80} 
                 className="rounded-full mb-4 border-2 border-accent shadow-md"
@@ -107,7 +107,7 @@ export default function TestimonialCarousel() {
             size="icon"
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 rounded-full h-10 w-10 shadow-md bg-background hover:bg-muted"
             onClick={prevTestimonial}
-            aria-label="Previous testimonial"
+            aria-label="이전 후기"
           >
             <ChevronLeft className="h-6 w-6 text-primary" />
           </Button>
@@ -116,7 +116,7 @@ export default function TestimonialCarousel() {
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 rounded-full h-10 w-10 shadow-md bg-background hover:bg-muted"
             onClick={nextTestimonial}
-            aria-label="Next testimonial"
+            aria-label="다음 후기"
           >
             <ChevronRight className="h-6 w-6 text-primary" />
           </Button>
@@ -126,7 +126,7 @@ export default function TestimonialCarousel() {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                aria-label={`Go to testimonial ${index + 1}`}
+                aria-label={`후기 ${index + 1}로 이동`}
                 className={`h-2.5 w-2.5 rounded-full transition-colors duration-300 ${
                   currentIndex === index ? 'bg-primary' : 'bg-muted hover:bg-primary/50'
                 }`}

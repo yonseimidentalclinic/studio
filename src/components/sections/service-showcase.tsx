@@ -25,33 +25,33 @@ const InlineToothIcon = (props: SVGProps<SVGSVGElement>) => (
 const services = [
   {
     icon: Stethoscope,
-    title: 'General Dentistry',
-    description: 'Comprehensive care for your everyday dental needs, from check-ups and cleanings to fillings and root canals.',
+    title: '일반 진료',
+    description: '정기 검진 및 스케일링부터 충치 치료, 신경 치료까지 일상적인 치과 진료를 포괄적으로 제공합니다.',
   },
   {
     icon: Sparkles,
-    title: 'Cosmetic Dentistry',
-    description: 'Enhance your smile with our cosmetic treatments, including teeth whitening, veneers, and smile makeovers.',
+    title: '심미 치과',
+    description: '치아 미백, 라미네이트, 스마일 메이크오버 등 심미 치료를 통해 당신의 미소를 더욱 아름답게 만들어 드립니다.',
   },
   {
     icon: Smile,
-    title: 'Orthodontics',
-    description: 'Straighten your teeth and improve your bite with traditional braces or modern clear aligners.',
+    title: '교정 치과',
+    description: '전통적인 교정 장치 또는 현대적인 투명 교정 장치를 통해 치열을 교정하고 교합을 개선합니다.',
   },
   {
     icon: InlineToothIcon,
-    title: 'Periodontics',
-    description: 'Specialized treatment for gum disease and other conditions affecting the supporting structures of your teeth.',
+    title: '치주 치과',
+    description: '잇몸 질환 및 치아 지지 구조에 영향을 미치는 기타 질환에 대한 전문 치료를 제공합니다.',
   },
   {
     icon: InlineToothIcon, 
-    title: 'Implant Dentistry',
-    description: 'Restore missing teeth with durable and natural-looking dental implants for a complete, functional smile.',
+    title: '임플란트',
+    description: '내구성이 뛰어나고 자연스러워 보이는 임플란트로 상실된 치아를 복원하여 완벽하고 기능적인 미소를 되찾아 드립니다.',
   },
   {
     icon: Stethoscope, 
-    title: 'Preventive Care',
-    description: 'Proactive measures to maintain optimal oral health and prevent dental problems before they start.',
+    title: '예방 관리',
+    description: '최적의 구강 건강을 유지하고 치과 문제가 발생하기 전에 예방하기 위한 선제적인 조치입니다.',
   },
 ];
 
@@ -60,9 +60,9 @@ export default function ServiceShowcase() {
     <section id="services" className="bg-background">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Our Services</h2>
+          <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">제공 서비스</h2>
           <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-            We offer a wide range of dental services to meet all your oral health needs.
+            저희는 여러분의 모든 구강 건강 요구를 충족시키기 위해 다양한 치과 서비스를 제공합니다.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

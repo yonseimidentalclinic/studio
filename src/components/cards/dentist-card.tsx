@@ -15,7 +15,7 @@ export default function DentistCard({ imageSrc, name, specialization, bio, image
       <div className="relative w-full h-64 md:h-72">
         <Image
           src={imageSrc}
-          alt={`Photo of ${name}`}
+          alt={`${name} 사진`}
           layout="fill"
           objectFit="cover"
           className="bg-muted"
