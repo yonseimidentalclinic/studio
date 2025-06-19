@@ -23,12 +23,12 @@ export default function HeroSection() {
           </div>
         </div>
         <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl animate-fade-in animation-delay-300">
-          <Image 
-            src="https://storage.googleapis.com/makerbot-images/makerfrontend/temp/L195304192_20240618210332.jpeg" 
-            alt="연세 미 치과 입구"
+          <Image
+            src="https://placehold.co/600x400.png"
+            alt="치과 진료실 또는 밝은 미소"
             layout="fill"
             objectFit="cover"
-            data-ai-hint="clinic entrance"
+            data-ai-hint="dental clinic"
             priority
           />
            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
