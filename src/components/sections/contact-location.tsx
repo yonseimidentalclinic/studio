@@ -54,12 +54,12 @@ export default function ContactLocation() {
           </Card>
           <div className="aspect-video bg-muted rounded-lg shadow-lg overflow-hidden animate-slide-up animation-delay-200">
             <Image
-              src="https://placehold.co/600x400.png"
-              alt="연세 미 치과 위치 또는 외부 전경"
+              src="https://i.imgur.com/qK0l94D.jpeg"
+              alt="연세 미 치과 입구"
               width={600}
               height={400}
               className="w-full h-full object-cover"
-              data-ai-hint="clinic exterior"
+              data-ai-hint="clinic entrance"
             />
           </div>
         </div>
